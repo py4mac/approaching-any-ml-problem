@@ -1,0 +1,5 @@
+data/*
+*.bin
+*.csv
+*.pyc
+*.zip
