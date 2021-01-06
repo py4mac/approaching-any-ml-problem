@@ -12,7 +12,7 @@ Credits to Abhishek Thakur
 - [x] Approaching categorical variables
 - [x] Feature engineering
 - [x] Feature selection
-- [ ] Hyperparameter Optimization
+- [x] Hyperparameter Optimization
 - [ ] Approaching image classification & segmentation
 - [ ] Approaching text classification/regression
 - [ ] Approaching ensembling & stacking
