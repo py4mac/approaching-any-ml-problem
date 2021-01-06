@@ -1,7 +1,9 @@
 # Study of "Approaching-any-ml-problem" book (wip)
 
 On-going study of "Approaching (Almost) Any Machine Learning Problem" book
-Credits to Abhishek Thakur
+
+## Credits
+**Abhishek Thakur**
 
 ## Chapters
 
