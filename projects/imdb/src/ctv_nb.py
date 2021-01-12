@@ -4,10 +4,10 @@ from nltk.tokenize import word_tokenize
 from sklearn import naive_bayes
 from sklearn import metrics
 from sklearn import model_selection
-from projects.imdb.src.config import TRAINING_FILE,MODEL_OUTPUT
+from projects.imdb.src.config import INPUT_FILE,MODEL_OUTPUT
 
 if __name__ == "__main__":
-    df = pd.read_csv(f"{TRAINING_FILE}")
+    df = pd.read_csv(f"{INPUT_FILE}")
 
     df["kfold"] = 1
 
