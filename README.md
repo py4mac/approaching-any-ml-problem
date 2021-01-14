@@ -1,4 +1,4 @@
-# Study of "Approaching-any-ml-problem" book (wip)
+# Study of "Approaching-any-ml-problem" book
 
 On-going study of "Approaching (Almost) Any Machine Learning Problem" book
 
@@ -15,10 +15,10 @@ On-going study of "Approaching (Almost) Any Machine Learning Problem" book
 - [x] Feature engineering
 - [x] Feature selection
 - [x] Hyperparameter Optimization
-- [ ] Approaching image classification & segmentation
-- [ ] Approaching text classification/regression
-- [ ] Approaching ensembling & stacking
-- [ ] Approaching reproducible code & model serving
+- ([ ] Approaching image classification & segmentation - NOT COVERED)
+- [x] Approaching text classification/regression - Impossible to make BERT works due to CPU limitation
+- [x] Approaching ensembling & stacking
+- ([ ] Approaching reproducible code & model serving - ALREADY COVERED)
 
 
 ## Notes

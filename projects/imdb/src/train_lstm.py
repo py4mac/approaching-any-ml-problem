@@ -7,10 +7,10 @@ import pandas as pd
 import tensorflow as tf
 
 from sklearn import metrics
-import projects.imdb.src.config as config
-import projects.imdb.src.dataset as dataset
+import projects.imdb.src.config_lstm as config
+import projects.imdb.src.dataset_lstm as dataset
 import projects.imdb.src.lstm as lstm
-import projects.imdb.src.engine as engine
+import projects.imdb.src.engine_lstm as engine
 
 def load_vectors(fname, limit=1000000):
     # https://fasttext.cc/docs/en/english-vectors.html
