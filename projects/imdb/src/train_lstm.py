@@ -1,3 +1,4 @@
+import argparse
 import io
 import torch
 
@@ -34,7 +35,7 @@ def create_embedding_matrix(word_index, embedding_dict):
     
     return embedding_matrix
 
-def run(df, fold):
+def run(df, fold, device_cfg):
     train_df = df[df.kfold != fold].reset_index(drop=True)
     valid_df = df[df.kfold == fold].reset_index(drop=True)
 
@@ -81,7 +82,7 @@ def run(df, fold):
         tokenizer.word_index, embedding_dict
     )
 
-    device = torch.device("cpu")
+    device = torch.device(device_cfg)
 
     model = lstm.LSTM(embedding_matrix)
 
@@ -113,11 +114,20 @@ def run(df, fold):
     
 if __name__ == "__main__":
 
+    parser = argparse.ArgumentParser()
+
+    # either "cpu" or "cuda"
+    parser.add_argument(
+        "--device",
+        type=str
+    )
+    args = parser.parse_args()
+
     df = pd.read_csv(f"{config.TRAINING_FILE}")
 
-    run(df, fold=0)
-    run(df, fold=1)
-    run(df, fold=2)
-    run(df, fold=3)
-    run(df, fold=4)
+    run(df, fold=0, device_cfg=args.device)
+    run(df, fold=1, device_cfg=args.device)
+    run(df, fold=2, device_cfg=args.device)
+    run(df, fold=3, device_cfg=args.device)
+    run(df, fold=4, device_cfg=args.device)
     

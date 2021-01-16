@@ -16,7 +16,7 @@ On-going study of "Approaching (Almost) Any Machine Learning Problem" book
 - [x] Feature selection
 - [x] Hyperparameter Optimization
 - ([ ] Approaching image classification & segmentation - NOT COVERED)
-- [x] Approaching text classification/regression - Impossible to make BERT works due to CPU limitation
+- [x] Approaching text classification/regression
 - [x] Approaching ensembling & stacking
 - ([ ] Approaching reproducible code & model serving - ALREADY COVERED)
 

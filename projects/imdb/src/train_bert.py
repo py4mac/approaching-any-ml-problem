@@ -1,3 +1,4 @@
+import argparse
 import io
 import torch
 
@@ -14,7 +15,7 @@ import projects.imdb.src.engine_bert as engine
 from transformers import AdamW
 from transformers import get_linear_schedule_with_warmup
 
-def train():
+def train(device_cfg):
     dfx = pd.read_csv(f"{config.TRAINING_FILE}").fillna("none")
 
     df_train, df_valid = model_selection.train_test_split(
@@ -49,7 +50,7 @@ def train():
         num_workers=1
     )
 
-    device = torch.device("cpu")
+    device = torch.device(device_cfg)
 
     model = BERTBaseUncased()
     model.to(device)
@@ -103,5 +104,14 @@ def train():
     
 if __name__ == "__main__":
 
-    train()
+    parser = argparse.ArgumentParser()
+
+    # either "cpu" or "cuda"
+    parser.add_argument(
+        "--device",
+        type=str
+    )
+    args = parser.parse_args()
+
+    train(device_cfg=args.device)
     
